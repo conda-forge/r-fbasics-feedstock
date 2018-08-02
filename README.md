@@ -14,14 +14,16 @@ Summary: Provides a collection of functions to  explore and to investigate basic
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-fbasics-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-fbasics-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-fbasics-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-fbasics-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-fbasics-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-fbasics-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-fbasics-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-fbasics-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-fbasics-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-fbasics-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-fbasics-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-fbasics-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-fbasics/badges/version.svg)](https://anaconda.org/conda-forge/r-fbasics)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-fbasics/badges/downloads.svg)](https://anaconda.org/conda-forge/r-fbasics)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--fbasics-green.svg)](https://anaconda.org/conda-forge/r-fbasics) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-fbasics.svg)](https://anaconda.org/conda-forge/r-fbasics) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-fbasics.svg)](https://anaconda.org/conda-forge/r-fbasics) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-fbasics.svg)](https://anaconda.org/conda-forge/r-fbasics) |
 
 Installing r-fbasics
 ====================
