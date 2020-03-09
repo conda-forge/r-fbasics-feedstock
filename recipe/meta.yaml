@@ -1,4 +1,4 @@
-{% set version = '3042.89' %}
+{% set version = "3042.89.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/fBasics_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/fBasics/fBasics_{{ version }}.tar.gz
-  sha256: b8b8d2362cbcfae3282b35fb59258cc956e2e60a5d19e3c7cee06b51b434da74
+  sha256: ad242043c2e7d2788706518570596e3ff7f536e09008ed87656de93d930b1dd5
 
 build:
-  merge_build_host: True  # [win]
-  number: 1002
+  merge_build_host: true  # [win]
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -53,13 +53,11 @@ test:
 about:
   home: https://www.rmetrics.org
   license: GPL (>= 2)
-  summary: Provides a collection of functions to  explore and to investigate basic properties
-    of financial returns  and related quantities. The covered fields include techniques
-    of explorative data analysis and the investigation of distributional properties,
-    including parameter estimation and hypothesis testing. Even more there are several
-    utility functions for data handling and management.
+  summary: Provides a collection of functions to  explore and to investigate basic properties of financial returns  and related quantities. The covered fields include
+    techniques of explorative data analysis and the investigation of distributional properties, including parameter estimation and hypothesis testing. Even more there
+    are several utility functions for data handling and management.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
