@@ -1,5 +1,4 @@
 {% set version = "3042.89.1" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,25 +7,28 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: fBasics_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/fBasics_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/fBasics/fBasics_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/fBasics_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/fBasics/fBasics_{{ version }}.tar.gz
   sha256: ad242043c2e7d2788706518570596e3ff7f536e09008ed87656de93d930b1dd5
 
 build:
-  merge_build_host: true  # [win]
+  merge_build_host: True  # [win]
   number: 1
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-mass
@@ -35,9 +37,9 @@ requirements:
     - r-stabledist
     - r-timedate
     - r-timeseries
-
   run:
     - r-base
+    - {{ native }}gcc-libs         # [win]
     - r-mass
     - r-gss
     - r-spatial
@@ -47,12 +49,12 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('fBasics')"  # [not win]
+    - $R -e "library('fBasics')"           # [not win]
     - "\"%R%\" -e \"library('fBasics')\""  # [win]
 
 about:
   home: https://www.rmetrics.org
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Provides a collection of functions to  explore and to investigate basic properties of financial returns  and related quantities. The covered fields include
     techniques of explorative data analysis and the investigation of distributional properties, including parameter estimation and hypothesis testing. Even more there
     are several utility functions for data handling and management.
@@ -62,8 +64,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
