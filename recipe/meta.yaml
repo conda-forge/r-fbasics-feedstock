@@ -21,6 +21,13 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-spatial                  # [build_platform != target_platform]
+    - r-stabledist               # [build_platform != target_platform]
+    - r-mass                     # [build_platform != target_platform]
+    - r-timeseries               # [build_platform != target_platform]
+    - r-timedate                 # [build_platform != target_platform]
+    - r-gss                      # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ posix }}filesystem        # [win]
