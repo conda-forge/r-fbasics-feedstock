@@ -7,7 +7,11 @@ Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-fbasics-feedstock/blob/main/LICENSE.txt)
 
-Summary: Provides a collection of functions to  explore and to investigate basic properties of financial returns  and related quantities. The covered fields include techniques of explorative data analysis and the investigation of distributional properties, including parameter estimation and hypothesis testing. Even more there are several utility functions for data handling and management.
+Summary: Provides a collection of functions to  explore and to investigate basic properties of financial returns and related quantities. The covered fields include techniques of explorative data analysis and the investigation of distributional properties, including parameter estimation and hypothesis testing. Even more there are several utility functions for data handling and management.
+
+Development: https://r-forge.r-project.org/scm/viewvc.php/pkg/fBasics/?root=rmetrics
+
+Documentation: https://geobosh.github.io/fBasicsDoc/
 
 Current build status
 ====================
