@@ -1,4 +1,4 @@
-{% set version = "4021.93" %}
+{% set version = "4022.94" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fBasics_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fBasics/fBasics_{{ version }}.tar.gz
-  sha256: e61d2aa37b4bd2f235f07954fef4f7af77885cf189f993b3f1ef41bc3f6fb5d2
+  sha256: c83b0c466089ab35e1eadf0fbed7bf17b950658625a80e88d404cfc6b64a6ad6
 
 build:
   merge_build_host: true  # [win]
@@ -63,12 +63,10 @@ about:
   dev_url: https://r-forge.r-project.org/scm/viewvc.php/pkg/fBasics/?root=rmetrics
   doc_url: https://geobosh.github.io/fBasicsDoc/
   license: GPL-2.0-or-later
-  summary: Provides a collection of functions to  explore and to investigate basic properties of financial returns 
-    and related quantities. The covered fields include techniques of explorative data analysis and the investigation 
-    of distributional properties, including parameter estimation and hypothesis testing. Even more there are several 
-    utility functions for data handling and management.
+  summary: Provides a collection of functions to  explore and to investigate basic properties of financial returns and related quantities. The covered fields include techniques of explorative data analysis and the investigation of distributional properties, including parameter estimation and hypothesis testing. Even more
+    there are several utility functions for data handling and management.
   license_family: GPL3
-  license_file: 
+  license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
