@@ -1,4 +1,4 @@
-{% set version = "4041.97" %}
+{% set version = "4052.98" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fBasics_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fBasics/fBasics_{{ version }}.tar.gz
-  sha256: 9942055e06e892e00616fa96255977c8bd7622666d4890b259e89f3ac74915ab
+  sha256: d2af0b19cfc964838f0c8d0f0a0a4416f61c14a733d80c501ca990c264210edd
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
