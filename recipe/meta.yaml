@@ -42,20 +42,20 @@ requirements:
     - {{ posix }}zip             # [win]
   host:
     - r-base
-    - r-gss
     - r-mass
+    - r-gss
     - r-spatial
     - r-stabledist
     - r-timedate
-    - r-timeseries
+    - r-timeseries >=4021.105
   run:
     - r-base
-    - r-gss
     - r-mass
+    - r-gss
     - r-spatial
     - r-stabledist
     - r-timedate
-    - r-timeseries
+    - r-timeseries >=4021.105
 
 test:
   commands:
